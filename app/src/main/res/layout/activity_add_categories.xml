@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin.add_categories"
+    android:background="@color/white">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/shopping"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/namecategories"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/circle4"
+        android:ems="10"
+        android:entries="@array/rate"
+        android:hint="Type"
+        android:inputType="textPersonName"
+        android:paddingStart="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+    <ImageView
+        android:id="@+id/button3"
+        android:layout_width="150dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="20sp"
+        android:background="@drawable/ic_baseline_photo_camera_24"
+        android:backgroundTint="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <Button
+        android:id="@+id/addcat"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/homebackground2"
+        android:text="add categories"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/namecategories" />
+
+    <Button
+        android:id="@+id/showcat"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/homebackground2"
+        android:text="show categories"
+        app:layout_constraintEnd_toEndOf="@+id/addcat"
+        app:layout_constraintStart_toStartOf="@+id/addcat"
+        app:layout_constraintTop_toBottomOf="@+id/addcat" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

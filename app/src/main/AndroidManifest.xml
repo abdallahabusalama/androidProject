@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.projectandroid" >
+    <!-- Include required permissions for Google Mobile Ads to run. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the "MyLocation" functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ProjectAndroid" >
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:label="@string/title_activity_main"
+            android:theme="@style/Theme.ProjectAndroid.NoActionBar" />
+        <!--
+             You can find your app ID in the AdMob UI. For android:value,
+            insert your own AdMob app ID in quotes, as shown below.
+            Sample AdMob App ID: ca-app-pub-3940256099942544~3347511713
+        -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713" />
+
+        <activity
+            android:name=".admin.MainActivity2"
+            android:exported="false"
+            android:label="@string/title_activity_main2" /> <!-- Include the AdActivity configChanges and theme. -->
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name=".admin.MainActivity"
+            android:exported="false"
+            android:label="@string/title_activity_main"
+            android:resizeableActivity="true"
+            android:theme="@style/Theme.ProjectAndroid.NoActionBar"
+            tools:targetApi="24" />
+        <activity android:name=".admin.login_admin" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".admin.MapsActivity"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps" />
+        <activity android:name=".product_cart" />
+        <activity android:name=".details_Category_User" />
+        <activity android:name=".Product_Details_User" />
+        <activity android:name=".admin.editcategories" />
+        <activity android:name=".admin.ProductDetails" />
+        <activity android:name=".admin.detailscategory" />
+        <activity android:name=".admin.edit" />
+        <activity android:name=".admin.Main" />
+        <activity android:name=".admin.add_products" />
+        <activity android:name=".admin.add_categories" />
+        <activity android:name=".admin.add" />
+        <activity android:name=".Screen.login" />
+        <activity android:name=".Screen.sign" />
+        <activity android:name=".MainActivity2" />
+        <activity android:name=".Screen.MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
